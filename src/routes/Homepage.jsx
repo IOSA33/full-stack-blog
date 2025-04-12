@@ -1,5 +1,7 @@
 import {Link} from "react-router-dom";
 import MainCategories from "../components/MainCategories.jsx";
+import FeaturedPosts from "../components/FeaturedPosts.jsx";
+import PostList from "../components/PostList.jsx";
 
 const Homepage = () => {
     return (
@@ -15,6 +17,7 @@ const Homepage = () => {
                 {/* Titles */}
                 <div className=''>
                     <h1 className='text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold'> The cat stared suspiciously at the toaster...</h1>
+                    {/* Titles text */}
                     <p className='mt-8 text-md md:text-xl'> The cat stared suspiciously at the toaster, as if it held ancient secrets.
                         Rain tapped gently on the window, weaving a rhythm softer than any lullaby.
                         He wore mismatched socks to every important meeting, claiming it brought luck.
@@ -41,7 +44,12 @@ const Homepage = () => {
             {/* CATEGORIES */}
             <MainCategories />
             {/* FEATURED POST */}
+            <FeaturedPosts />
             {/* POST LIST */}
+            <div className=''>
+                <h1 className='my-8 text-2xl text-gray-600'> Recent Posts </h1>
+                <PostList />
+            </div>
         </div>
     )
 }
